@@ -1,0 +1,14 @@
+seed: 42
+data_root: E:\VeyraAtlas\sen1floods11
+output_dir: E:\VeyraAtlas\flood_smoke
+epochs: 1
+batch_size: 1
+learning_rate: 0.0003
+num_workers: 0
+patience: 1
+base_channels: 8
+max_train_samples: 4
+max_val_samples: 2
+use_lee_filter: false
+mc_dropout_passes: 3
+device: cpu
