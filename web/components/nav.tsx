@@ -1,0 +1,4 @@
+"use client";
+import Link from "next/link"; import { usePathname } from "next/navigation"; import { VeyraLogo } from "@/components/veyra-logo";
+const links=[["/","Mission"],["/predict","Predict"],["/analyze","Analyze"],["/scenes","Scenes"],["/datasets","Dataset tools"],["/about","Models"]];
+export function Nav(){const path=usePathname();return <header className="sticky top-0 z-40 border-b border-sky-200/80 bg-white/70 backdrop-blur-xl"><nav className="mx-auto flex max-w-7xl items-center gap-5 px-5 py-3"><VeyraLogo/><div className="ml-auto flex gap-1 overflow-x-auto">{links.map(([href,label])=><Link key={href} href={href} className={`whitespace-nowrap rounded-full px-3 py-2 text-sm transition ${path===href?"bg-gradient-to-r from-cyan/15 to-violet-100 text-cyan font-semibold":"text-slate-600 hover:bg-sky-50 hover:text-cyan"}`}>{label}</Link>)}</div></nav></header>}
