@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.runtime/
+.venv/
+
+# Next.js
+web/node_modules/
+web/.next/
+
+# Local application data and generated imagery
+storage/
+data/
+sample_inputs/
+*.db
+
+# ML artifacts and local datasets
+artifacts/
+checkpoints/
+*.onnx
+*.pt
+*.pth
+
+# Local settings and logs
+.env
+.env.*
+*.log
+*.err
