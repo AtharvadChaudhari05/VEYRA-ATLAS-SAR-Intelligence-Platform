@@ -1,0 +1,3 @@
+import Link from "next/link";
+
+export function VeyraLogo(){return <Link href="/" className="group flex items-center gap-2.5 font-bold tracking-tight text-ink" aria-label="Veyra Atlas home"><span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-[#146c94] via-[#1bb9bb] to-[#6246d9] shadow-glow"><i className="absolute h-5 w-5 rounded-full border-2 border-white/90"/><i className="absolute h-8 w-8 rounded-full border border-white/40"/><i className="absolute h-7 w-px rotate-45 bg-white"/></span><span className="leading-none">VEYRA <em className="not-italic text-cyan">ATLAS</em><small className="mt-1 block text-[8px] font-semibold tracking-[.18em] text-slate-500">EARTH SIGNAL STUDIO</small></span></Link>}
