@@ -1,0 +1,11 @@
+seed: 42
+data_root: data/sen1floods11
+output_dir: artifacts/flood_sen1floods11
+epochs: 80
+batch_size: 4
+learning_rate: 0.0003
+num_workers: 2
+patience: 12
+use_lee_filter: false
+mc_dropout_passes: 12
+device: auto
