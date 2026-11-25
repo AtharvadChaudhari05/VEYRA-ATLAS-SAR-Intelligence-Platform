@@ -1,0 +1,14 @@
+# Full official benchmark run. This is intentionally distinct from the smoke config.
+seed: 42
+data_root: E:\VeyraAtlas\sen1floods11
+output_dir: E:\VeyraAtlas\flood_full_cpu_v2
+epochs: 80
+batch_size: 2
+learning_rate: 0.0003
+num_workers: 0
+patience: 12
+base_channels: 16
+train_patch_size: 256
+use_lee_filter: false
+mc_dropout_passes: 12
+device: cpu
