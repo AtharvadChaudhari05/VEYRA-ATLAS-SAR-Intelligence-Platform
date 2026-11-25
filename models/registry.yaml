@@ -1,0 +1,28 @@
+models:
+  - name: deterministic-sar-to-optical-v0
+    version: v0
+    task: sar_to_optical_visualization
+    runtime: numpy
+    status: baseline
+    metrics: {}
+    limitations: "Visual interpretation only; not a real optical photograph."
+  - name: deterministic-flood-segmentation-v0
+    version: v0
+    task: flood_segmentation
+    runtime: numpy
+    status: baseline
+    metrics: {}
+    limitations: "Heuristic baseline; not a trained ML model."
+  - name: flood-unet-sen1floods11
+    version: smoke-2026-11-24
+    task: flood_segmentation
+    runtime: onnxruntime
+    status: smoke_only_not_eligible
+    dataset: Sen1Floods11 S1Hand/LabelHand
+    input: [VV_dB, VH_dB, VV_minus_VH_dB]
+    onnx_path: artifacts/flood_sen1floods11/model.onnx
+    metrics:
+      official_test_iou: 0.1251
+      bolivia_iou: 0.1586
+      run_type: "4 train chips, 2 validation chips, 1 CPU epoch"
+    limitations: "Smoke checkpoint underperformed the deterministic baseline and must not be deployed."
